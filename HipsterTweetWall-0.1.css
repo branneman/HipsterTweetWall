@@ -1,0 +1,56 @@
+@-webkit-keyframes scrollUp {
+   from { top: 100%; }
+   to { top: -5%; }
+}
+@-moz-keyframes scrollUp {
+   from { top: 100%; }
+   to { top: -5%; }
+}
+@keyframes scrollUp {
+   from { top: 100%; }
+   to { top: -5%; }
+}
+
+.hipster-tweetwall {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.hipster-tweetwall-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.hipster-tweetwall > div {
+    position: absolute;
+    top: -5%;
+    left: 5%;
+    right: 5%;
+    height: 5%;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    -webkit-animation-name: scrollUp;
+       -moz-animation-name: scrollUp;
+            animation-name: scrollUp;
+    -webkit-animation-iteration-count: infinite;
+       -moz-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+       -moz-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-play-state: paused;
+       -moz-animation-play-state: paused;
+            animation-play-state: paused;
+}
+.hipster-tweetwall > div.running {
+    -webkit-animation-play-state: running;
+       -moz-animation-play-state: running;
+            animation-play-state: running;
+}
+.hipster-tweetwall > div .date {
+    color: gray;
+    font-weight: normal;
+}

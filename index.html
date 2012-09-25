@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hipster Tweet Wall</title>
+        <style>
+            .outer {
+                position: absolute;
+                top: 5%;
+                bottom: 5%;
+                left: 5%;
+                right: 5%;
+            }
+        </style>
+        <link rel="stylesheet" href="http://branneman.github.com/HipsterTweetWall/HipsterTweetWall-0.1.css">
+    </head>
+    <body>
+        <div class="outer">
+            <div class="hipster-tweetwall-overlay"></div>
+            <div class="hipster-tweetwall" data-component="HipsterTweetWall"></div>
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="http://branneman.github.com/HipsterTweetWall/HipsterTweetWall-0.1.js"></script>
+        <script>
+            $(function() {
+                HipsterTweetWall.init();
+            });
+        </script>
+    </body>
+</html>
