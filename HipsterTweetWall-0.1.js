@@ -8,7 +8,7 @@
  *
  * License:
  *   GNU General Public License, version 3 (GPL-3.0)
- *   http://www.opensource.org/licenses/gpl-3.0.html 
+ *   http://www.opensource.org/licenses/gpl-3.0.html
  */
 var HipsterTweetWall = new function() {
 
@@ -21,7 +21,7 @@ var HipsterTweetWall = new function() {
             'speed':          20000,
             'updateInterval': 5000,
             'font-size':      '36px',
-            'tweetHtml':      '<div><span class="avatar"></span><span class="user">@[user]</span><span class="tweet">[tweet]</span><span class="date">[date]</span></div>'
+            'tweetHtml':      '<div><span class="avatar">[avatar]</span><span class="user">@[user]</span><span class="tweet">[tweet]</span><span class="date">[date]</span></div>'
         };
 
     // Check whether the html for the component is found, then bootstrap it
@@ -97,7 +97,7 @@ var HipsterTweetWall = new function() {
     var loadTweets = function() {
 
         // Build url for Twitter REST API request, expecting a JSONP response
-        var url = 
+        var url =
             'http://search.twitter.com/search.json?q=' + config.search +
             (config.includeRTs ? '' : '+exclude:retweets') +
             '&rpp=' + config.totalTweets +
@@ -123,11 +123,18 @@ var HipsterTweetWall = new function() {
                 months[dateObject.getMonth()] + ' &#39;' +
                 (dateObject.getFullYear() + '').substring(2);
 
+        // Create avatar html
+        var avatarHtml =
+            '<img src="' +
+            tweet.profile_image_url.replace('_normal', '_bigger') +
+            '">';
+
         // Build tweet html
         var tweetHtml = config.tweetHtml
-        	.replace('[user]',  tweet.from_user)
-        	.replace('[tweet]', tweet.text)
-        	.replace('[date]',  dateString);
+            .replace('[avatar]', avatarHtml)
+            .replace('[user]',   tweet.from_user)
+            .replace('[tweet]',  tweet.text)
+            .replace('[date]',   dateString);
 
         // Check whether a tweet on the current index already exists
         var node = $reference.children('[data-index=' + index + ']');
@@ -149,20 +156,20 @@ var HipsterTweetWall = new function() {
             node.on('animationiteration', animationIteration);
         }
 
-		// Queue the image for loading in the background
+        // Queue the image for loading in the background
         // @todo implement
-		//addToBackgroundImageQueue(tweet.entities.urls[0].expanded_url);
+        //addToBackgroundImageQueue(tweet.entities.urls[0].expanded_url);
 
     };
 
-	// Add a image url to the backgroundImageQueue when it's not already there
+    // Add a image url to the backgroundImageQueue when it's not already there
     // @todo implement
-	var backgroundImageQueue = [];
-	var addToBackgroundImageQueue = function(url) {
-		if ($.inArray(url, backgroundImageQueue) === -1) {
-			backgroundImageQueue.push(url);
-		}
-	};
+    var backgroundImageQueue = [];
+    var addToBackgroundImageQueue = function(url) {
+        if ($.inArray(url, backgroundImageQueue) === -1) {
+            backgroundImageQueue.push(url);
+        }
+    };
 
     // Grab a background image referenced in a tweet
     var updateBackgroundImage = function() {

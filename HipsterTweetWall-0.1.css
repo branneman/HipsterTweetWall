@@ -81,6 +81,9 @@ body {
     height: 100px;
     background: #86b32d;
 }
+.hipster-tweetwall .tweet-container .avatar img {
+    width: 100%;
+}
 .hipster-tweetwall .tweet-container .user {
     display: block;
     color: #b9f73e;
