@@ -67,6 +67,7 @@ body {
 }
 .hipster-tweetwall-overlay {
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .75) 0%, rgba(0, 0, 0, .60) 100%);
+    background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, .75) 0%, rgba(0, 0, 0, .60) 100%);
     background-repeat: no-repeat;
     background-size: cover;
 }
