@@ -62,7 +62,13 @@
  * The Hipster part, making it Metro-like
  */
 body {
-    background: #c9f76f;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hipster-tweetwall-overlay {
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .75) 0%, rgba(0, 0, 0, .60) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .hipster-tweetwall .tweet-container {
     font-family: 'Segoe UI', 'Tahoma', 'Lucida Grande', Arial, sans-serif;
@@ -71,7 +77,6 @@ body {
     position: relative;
     min-height: 100px;
     padding: 12px 12px 12px 124px;
-    background: #679b00;
 }
 .hipster-tweetwall .tweet-container .avatar {
     position: absolute;
@@ -79,17 +84,16 @@ body {
     left: 12px;
     width: 100px;
     height: 100px;
-    background: #86b32d;
 }
 .hipster-tweetwall .tweet-container .avatar img {
     width: 100%;
 }
 .hipster-tweetwall .tweet-container .user {
     display: block;
-    color: #b9f73e;
+    color: white;
 }
 .hipster-tweetwall .tweet-container .tweet {
-    color: #c9f76f;
+    color: white;
 }
 .hipster-tweetwall .tweet-container .date {
     display: none;

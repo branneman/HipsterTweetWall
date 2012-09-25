@@ -15,13 +15,14 @@ var HipsterTweetWall = new function() {
     var $reference,
         api = {},
         config = {
-            'search':         '@cnn',
-            'totalTweets':    4,
-            'includeRTs':     false,
-            'speed':          20000,
-            'updateInterval': 5000,
-            'font-size':      '36px',
-            'tweetHtml':      '<div><span class="avatar">[avatar]</span><span class="user">@[user]</span><span class="tweet">[tweet]</span><span class="date">[date]</span></div>'
+            'search':          '@cnn',
+            'totalTweets':     4,
+            'includeRTs':      false,
+            'speed':           20000,
+            'updateInterval':  5000,
+            'font-size':       '36px',
+            'backgroundImage': 'bg.jpg',
+            'tweetHtml':       '<div><span class="avatar">[avatar]</span><span class="user">@[user]</span><span class="tweet">[tweet]</span><span class="date">[date]</span></div>'
         };
 
     // Check whether the html for the component is found, then bootstrap it
@@ -36,6 +37,9 @@ var HipsterTweetWall = new function() {
 
         // Override config settings when url parameters or configParams is passed along
         readConfig(configParams);
+
+        // Place the backgroundImage as the body background
+        setBackgroundImage();
 
         // Start grabbing tweets, then start animation
         loadTweets();
@@ -156,24 +160,11 @@ var HipsterTweetWall = new function() {
             node.on('animationiteration', animationIteration);
         }
 
-        // Queue the image for loading in the background
-        // @todo implement
-        //addToBackgroundImageQueue(tweet.entities.urls[0].expanded_url);
-
     };
 
-    // Add a image url to the backgroundImageQueue when it's not already there
-    // @todo implement
-    var backgroundImageQueue = [];
-    var addToBackgroundImageQueue = function(url) {
-        if ($.inArray(url, backgroundImageQueue) === -1) {
-            backgroundImageQueue.push(url);
-        }
-    };
-
-    // Grab a background image referenced in a tweet
-    var updateBackgroundImage = function() {
-        // @todo implement
+    // Place config.backgroundImage as the body background
+    var setBackgroundImage = function() {
+        $('body').css('background-image', "url('" + config.backgroundImage + "')");
     };
 
     return api;
