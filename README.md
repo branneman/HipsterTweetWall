@@ -1,4 +1,7 @@
 # HipsterTweetWall
+Yet another tweet wall! What can I say. This one is quite minimalistic, only front-end. There's a Github hosted and self-hosted version available.
+
+It was created by [Bran van der Meer](http://bran.name/) so [Fronteers 2012](http://fronteers.nl/congres/2012) would not have a Flash-based tweetwall, but a CSS3 animation-based one.
 
 ## Examples
    * Simple example wall: [`#search=fronteers`](http://branneman.github.com/HipsterTweetWall/#search=fronteers)
@@ -10,10 +13,9 @@
      I consider this not a problem, since in most of the situations the used browser is in a controlled environment.
    * It has been designed for screens with the [4:3 ratio](http://en.wikipedia.org/wiki/File:Vector_Video_Standards4.svg), since most beamers are not yet widescreen.
      You can easily make it work on a different ratio, just change the backgroundImage.
-   * Add config parameters in the url after the hash.
-   * Add config parameters while calling `OpenTweetWall.init()`, example:  
+   * Github Pages hosting: Add config parameters in the url after the hash.
+   * Self hosting: Add config parameters while calling `OpenTweetWall.init()`, example:  
      `OpenTweetWall.init({'search': 'fronteers', 'speed': 10000});`
-   * 2 Versions: Hosted on github and downloadable for self-hosting.
 
 ## Config parameters
    * `search` _string_  
@@ -25,7 +27,8 @@
    * `speed` _integer_  
      Number of milliseconds it will take a single tweet to reach the top, default 20000 (20 sec).
    * `updateInterval` _integer_ or _boolean_ `false`  
-     Number of milliseconds after which twitter will be polled for new tweets, false for no updates. Default 5000 (5 sec). See [Twitter Rate limits](https://dev.twitter.com/docs/rate-limiting).
+     Number of milliseconds after which twitter will be polled for new tweets, false for no updates. Default 5000 (5 sec).  
+     See [Twitter Rate limits](https://dev.twitter.com/docs/rate-limiting).
    * `font-size` _string_  
      CSS font-size declaration, default `36px`.
    * `backgroundImage` _string_ url  
