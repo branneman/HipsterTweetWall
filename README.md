@@ -25,5 +25,7 @@
      Number of milliseconds after which twitter will be polled for new tweets, false for no updates. Default 5000 (5 sec). See [Twitter Rate limits](https://dev.twitter.com/docs/rate-limiting).
    * `font-size` _string_  
      CSS font-size declaration, default `36px`.
+   * `backgroundImage` _string_ url  
+     Body background image, default: `'bg.jpg'`
    * `tweetHtml` _string_  
      HTML template for a single tweet, available variables are: `[user]` `[tweet]` `[date]`
