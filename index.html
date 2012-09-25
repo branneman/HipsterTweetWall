@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="utf-8">
         <title>Hipster Tweet Wall</title>
@@ -11,6 +11,19 @@
                 left: 0;
                 right: 0;
             }
+            .shameless-plug {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                padding: 12px 24px;
+                border-radius: 12px 0 0 0;
+                background: white;
+                font-family: 'Segoe UI', 'Tahoma', 'Lucida Grande', Arial, sans-serif;
+                font-size: 24px;
+                color: #000;
+                text-decoration: none;
+                opacity: .8;
+            }
         </style>
         <link rel="stylesheet" href="HipsterTweetWall-0.1.css">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -19,6 +32,7 @@
         <div class="outer">
             <div class="hipster-tweetwall-overlay"></div>
             <div class="hipster-tweetwall" data-component="HipsterTweetWall"></div>
+            <a class="shameless-plug" href="https://github.com/branneman/HipsterTweetWall">HipsterTweetWall</a>
         </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
