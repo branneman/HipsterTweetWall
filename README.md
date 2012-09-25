@@ -1,9 +1,9 @@
 # HipsterTweetWall
 
 ## Examples
-   * Simple example wall: `[#search=fronteers](http://branneman.github.com/HipsterTweetWall/#search=fronteers)`
-   * Simple example wall, with complex query: `[#search=fronteers+OR+fronteers12](http://branneman.github.com/HipsterTweetWall/#search=fronteers+OR+fronteers12)`
-   * Simple example wall, with speed: `[#search=fronteers&speed=10000](http://branneman.github.com/HipsterTweetWall/#search=fronteers&speed=10000)`
+   * Simple example wall: [`#search=fronteers`](http://branneman.github.com/HipsterTweetWall/#search=fronteers)
+   * Simple example wall, with complex query: [`#search=fronteers+OR+fronteers12`](http://branneman.github.com/HipsterTweetWall/#search=fronteers+OR+fronteers12)
+   * Simple example wall, with speed: [`#search=fronteers&speed=10000`](http://branneman.github.com/HipsterTweetWall/#search=fronteers&speed=10000)
 
 ## Features
    * Makes use of CSS3 animations, see [supported browsers](http://caniuse.com/#feat=css-animation).
@@ -14,7 +14,7 @@
 
 ## Config parameters
    * `search` _string_  
-     The twitter search string, default 'twitter'
+     The twitter search string, default `'twitter'`
    * `totalTweets` _integer_  
      Number of maximum tweets that will be on screen at the same time, default 10.
    * `includeRTs` _boolean_  
@@ -26,4 +26,4 @@
    * `font-size` _string_  
      CSS font-size declaration, default `100%`.
    * `tweetHtml` _string_  
-     HTML template for a single tweet, available variables are: [user] [tweet] [date]
+     HTML template for a single tweet, available variables are: `[user]` `[tweet]` `[date]`
