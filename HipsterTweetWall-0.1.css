@@ -1,16 +1,22 @@
+/**
+ * Define animation 'scrollUp'
+ */
 @-webkit-keyframes scrollUp {
    from { top: 100%; }
-   to { top: -5%; }
+   to { top: -25%; }
 }
 @-moz-keyframes scrollUp {
    from { top: 100%; }
-   to { top: -5%; }
+   to { top: -25%; }
 }
 @keyframes scrollUp {
    from { top: 100%; }
-   to { top: -5%; }
+   to { top: -25%; }
 }
 
+/**
+ * TweetWall necessary styles
+ */
 .hipster-tweetwall {
     position: relative;
     width: 100%;
@@ -23,15 +29,12 @@
     width: 100%;
     height: 100%;
 }
-.hipster-tweetwall > div {
+.hipster-tweetwall .tweet-container {
     position: absolute;
     top: -5%;
     left: 5%;
     right: 5%;
     height: 5%;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    text-align: center;
     -webkit-animation-name: scrollUp;
        -moz-animation-name: scrollUp;
             animation-name: scrollUp;
@@ -45,12 +48,46 @@
        -moz-animation-play-state: paused;
             animation-play-state: paused;
 }
-.hipster-tweetwall > div.running {
+.hipster-tweetwall .tweet-container.running {
     -webkit-animation-play-state: running;
        -moz-animation-play-state: running;
             animation-play-state: running;
 }
-.hipster-tweetwall > div .date {
+.hipster-tweetwall .tweet-container .date {
     color: gray;
     font-weight: normal;
+}
+
+/**
+ * The Hipster part, making it Metro-like
+ */
+body {
+    background: #c9f76f;
+}
+.hipster-tweetwall .tweet-container {
+    font-family: 'Segoe UI', 'Tahoma', 'Lucida Grande', Arial, sans-serif;
+}
+.hipster-tweetwall .tweet-container > div {
+    position: relative;
+    min-height: 100px;
+    padding: 12px 12px 12px 124px;
+    background: #679b00;
+}
+.hipster-tweetwall .tweet-container .avatar {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 100px;
+    height: 100px;
+    background: #86b32d;
+}
+.hipster-tweetwall .tweet-container .user {
+    display: block;
+    color: #b9f73e;
+}
+.hipster-tweetwall .tweet-container .tweet {
+    color: #c9f76f;
+}
+.hipster-tweetwall .tweet-container .date {
+    display: none;
 }

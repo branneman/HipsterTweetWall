@@ -15,13 +15,13 @@ var HipsterTweetWall = new function() {
     var $reference,
         api = {},
         config = {
-            'search':         'twitter',
-            'totalTweets':    10,
+            'search':         '@cnn',
+            'totalTweets':    4,
             'includeRTs':     false,
-            'speed':          15000,
+            'speed':          20000,
             'updateInterval': 5000,
-            'font-size':      '100%',
-            'tweetHtml':      '<span class="user">@[user]</span>: <span class="tweet">[tweet]</span> <span class="date">[date]</span>'
+            'font-size':      '36px',
+            'tweetHtml':      '<div><span class="avatar"></span><span class="user">@[user]</span><span class="tweet">[tweet]</span><span class="date">[date]</span></div>'
         };
 
     // Check whether the html for the component is found, then bootstrap it
@@ -83,8 +83,8 @@ var HipsterTweetWall = new function() {
                 interval = (config.speed / config.totalTweets) * index;
             $element.css({
                 '-webkit-animation-duration': duration,
-                '-moz-animation-duration': duration,
-                'animation-duration': duration,
+                   '-moz-animation-duration': duration,
+                        'animation-duration': duration,
                 'font-size': config['font-size']
             });
             setTimeout(function() {
@@ -134,7 +134,7 @@ var HipsterTweetWall = new function() {
 
         // Create new element when a tweet on the current index does not exist yet
         if (!node.length) {
-            tweetHtml = '<div data-index="' + index + '">' + tweetHtml + '</div>';
+            tweetHtml = '<div class="tweet-container" data-index="' + index + '">' + tweetHtml + '</div>';
             $reference.append(tweetHtml);
         }
 
