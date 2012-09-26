@@ -9,7 +9,7 @@ It was created by [Bran van der Meer](http://bran.name/) so [Fronteers 2012](htt
    * Simple example wall, with speed: [`#search=fronteers&speed=10000`](http://branneman.github.com/HipsterTweetWall/#search=fronteers&speed=10000)
 
 ## Features
-   * Relies heavily on [CSS3 animations](http://caniuse.com/#feat=css-animation), basically the only supported browsers are the latest stables of Chrome and Firefox.
+   * Relies heavily on [CSS3 animations](http://caniuse.com/#feat=css-animation), basically the only supported browsers are the latest stables of Chrome, Firefox and Opera.
      I consider this not a problem, since in most of the situations the used browser is in a controlled environment.
    * It has been designed for screens with the [4:3 ratio](http://en.wikipedia.org/wiki/File:Vector_Video_Standards4.svg), since most beamers are not yet widescreen.
      You can easily make it work on a different ratio, just change the backgroundImage.
