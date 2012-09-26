@@ -88,6 +88,7 @@ var HipsterTweetWall = new function() {
             $element.css({
                 '-webkit-animation-duration': duration,
                    '-moz-animation-duration': duration,
+                     '-o-animation-duration': duration,
                         'animation-duration': duration,
                 'font-size': config['font-size']
             });
@@ -154,9 +155,11 @@ var HipsterTweetWall = new function() {
             var animationIteration = function() {
                 node.html(tweetHtml);
                 node.off('webkitAnimationIteration');
+                node.off('oanimationiteration');
                 node.off('animationiteration');
             };
             node.on('webkitAnimationIteration', animationIteration);
+            node.on('oanimationiteration', animationIteration);
             node.on('animationiteration', animationIteration);
         }
 

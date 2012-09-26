@@ -3,15 +3,19 @@
  */
 @-webkit-keyframes scrollUp {
    from { top: 100%; }
-   to { top: -25%; }
+   to   { top: -25%; }
 }
 @-moz-keyframes scrollUp {
    from { top: 100%; }
-   to { top: -25%; }
+   to   { top: -25%; }
+}
+@-o-keyframes scrollUp {
+   from { top: 100%; }
+   to   { top: -25%; }
 }
 @keyframes scrollUp {
    from { top: 100%; }
-   to { top: -25%; }
+   to   { top: -25%; }
 }
 
 /**
@@ -37,20 +41,25 @@
     height: 5%;
     -webkit-animation-name: scrollUp;
        -moz-animation-name: scrollUp;
+         -o-animation-name: scrollUp;
             animation-name: scrollUp;
     -webkit-animation-iteration-count: infinite;
        -moz-animation-iteration-count: infinite;
+         -o-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
        -moz-animation-timing-function: linear;
+         -o-animation-timing-function: linear;
             animation-timing-function: linear;
     -webkit-animation-play-state: paused;
        -moz-animation-play-state: paused;
+         -o-animation-play-state: paused;
             animation-play-state: paused;
 }
 .hipster-tweetwall .tweet-container.running {
     -webkit-animation-play-state: running;
        -moz-animation-play-state: running;
+         -o-animation-play-state: running;
             animation-play-state: running;
 }
 .hipster-tweetwall .tweet-container .date {
@@ -68,6 +77,7 @@ body {
 .hipster-tweetwall-overlay {
     background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .75) 0%, rgba(0, 0, 0, .60) 100%);
     background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, .75) 0%, rgba(0, 0, 0, .60) 100%);
+    background-image:      -o-linear-gradient(top, rgba(0, 0, 0, .75) 0%, rgba(0, 0, 0, .60) 100%);
     background-repeat: no-repeat;
     background-size: cover;
 }
